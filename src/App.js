@@ -62,6 +62,12 @@ export default function App() {
             <img src={icon} alt={description} />
           </li>
         </ul>
+        <p>
+          <a href="https://github.com/mschute/weather-for-react">
+            Open-source coded
+          </a>
+          , by Marta Unterschute
+        </p>
       </div>
     );
   } else {
@@ -69,6 +75,12 @@ export default function App() {
       <div className="App">
         <h1>Weather App</h1>
         {form}
+        <p>
+          <a href="https://github.com/mschute/weather-for-react">
+            Open-source coded
+          </a>
+          , by Marta Unterschute
+        </p>
       </div>
     );
   }

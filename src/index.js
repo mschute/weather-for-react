@@ -10,12 +10,6 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <App />
-    <p>
-      <a href="https://github.com/mschute/weather-for-react">
-        Open-source coded
-      </a>
-      by Marta Unterschute
-    </p>
   </StrictMode>
 );
 
