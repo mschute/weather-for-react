@@ -73,18 +73,20 @@ export default function App() {
   } else {
     return (
       <div className="App">
-        <h1>Weather App</h1>
-        {form}
-        <p>
-          <a
-            href="https://github.com/mschute/weather-for-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open-source coded
-          </a>
-          , by Marta Unterschute
-        </p>
+        <div class="container-sm text-center">
+          <h1>Weather App</h1>
+          {form}
+          <p>
+            <a
+              href="https://github.com/mschute/weather-for-react"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open-source coded
+            </a>
+            , by Marta Unterschute
+          </p>
+        </div>
       </div>
     );
   }
