@@ -76,7 +76,11 @@ export default function App() {
         <h1>Weather App</h1>
         {form}
         <p>
-          <a href="https://github.com/mschute/weather-for-react">
+          <a
+            href="https://github.com/mschute/weather-for-react"
+            target="_blank"
+            rel="noreferrer"
+          >
             Open-source coded
           </a>
           , by Marta Unterschute
