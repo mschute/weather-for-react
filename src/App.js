@@ -50,24 +50,26 @@ export default function App() {
   if (loaded) {
     return (
       <div className="App">
-        <h1>Weather App</h1>
-        {form}
-        <ul>
-          <li>City: {city}</li>
-          <li>Temperature: {Math.round(temperature)}°C</li>
-          <li>Description: {description}</li>
-          <li>Humidity: {humidity}%</li>
-          <li>Wind: {wind} km/h</li>
-          <li>
-            <img src={icon} alt={description} />
-          </li>
-        </ul>
-        <p>
-          <a href="https://github.com/mschute/weather-for-react">
-            Open-source coded
-          </a>
-          , by Marta Unterschute
-        </p>
+        <div class="container-sm text-center">
+          <h1>Weather App</h1>
+          {form}
+          <ul>
+            <li>City: {city}</li>
+            <li>Temperature: {Math.round(temperature)}°C</li>
+            <li>Description: {description}</li>
+            <li>Humidity: {humidity}%</li>
+            <li>Wind: {wind} km/h</li>
+            <li>
+              <img src={icon} alt={description} />
+            </li>
+          </ul>
+          <p>
+            <a href="https://github.com/mschute/weather-for-react">
+              Open-source coded
+            </a>
+            , by Marta Unterschute
+          </p>
+        </div>
       </div>
     );
   } else {
