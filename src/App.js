@@ -51,7 +51,7 @@ export default function App() {
   return (
     <div className="App">
       <div class="container-sm text-center">
-        <Weather />
+        <Weather city="London" />
         {/* {form}
           <ul>
             <li>City: {city}</li>
