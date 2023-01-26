@@ -5,11 +5,11 @@ import axios from "axios";
 import CurrentDate from "./CurrentDate";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     setWeatherData({
+      ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
@@ -17,11 +17,9 @@ export default function Weather(props) {
       description: response.data.condition.description,
       iconUrl: response.data.condition.icon_url,
     });
-
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     const apiKey = "f4ff5751e00t63c15a8eb8eo1612abfe";
     let city = props.city;
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
