@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
-// import currentWeatherDashIcon from "./currentWeatherDashIcon.png";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -13,7 +13,7 @@ export default function Weather(props) {
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      date: "Jan 24 2023",
+      date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       iconUrl: response.data.condition.icon_url,
     });
@@ -75,7 +75,9 @@ export default function Weather(props) {
           </ul>
           <ul className="col-5 location">
             <li className="current-city">{props.city}</li>
-            <li className="day-time">{weatherData.date}</li>
+            <li className="day-time">
+              <CurrentDate date={weatherData.date} />
+            </li>
             <li className="current-weather-desc">{weatherData.description}</li>
           </ul>
         </div>
