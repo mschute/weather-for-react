@@ -37,11 +37,6 @@ export default function Weather(props) {
   }
 
   if (weatherData.ready) {
-    const apiKey = "f4ff5751e00t63c15a8eb8eo1612abfe";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    console.log({ apiUrl });
-    axios.get(apiUrl).then(handleResponse);
-
     return (
       <div className="Weather">
         <h1>Weather Forecast</h1>
@@ -51,6 +46,7 @@ export default function Weather(props) {
             placeholder="Enter a city..."
             className="form-control"
             autoComplete="off"
+            autoFocus="on"
             onChange={handleCity}
           />
           <input type="submit" value="Search" className="search-button" />
@@ -60,20 +56,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return (
-      <div className="Weather">
-        <h1>Weather Forecast</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Enter a city..."
-            className="form-control"
-            autoComplete="off"
-            onChange={handleCity}
-          />
-          <input type="submit" value="Search" className="search-button" />
-        </form>
-      </div>
-    );
+    return "Loading...";
   }
 }

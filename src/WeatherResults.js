@@ -4,8 +4,8 @@ import CurrentDate from "./CurrentDate";
 export default function WeatherResults(props) {
   return (
     <div className="WeatherResults">
-      <div class="row current-stats">
-        <div class="col-1 icon">
+      <div className="row current-stats">
+        <div className="col-1 icon">
           <img
             src={props.data.iconUrl}
             alt="weather icon"
