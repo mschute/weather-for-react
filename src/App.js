@@ -11,8 +11,11 @@ export default function App() {
       <div className="footer-link">
         <a href="https://github.com/mschute/weather-for-react">
           Open-source coded
+        </a>{" "}
+        by Marta Unterschute and{" "}
+        <a href="https://stunning-trifle-6a4b1e.netlify.app/">
+          hosted on Netlify
         </a>
-        , by Marta Unterschute
       </div>
     </div>
   );
