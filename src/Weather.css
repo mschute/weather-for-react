@@ -4,21 +4,25 @@
 
 .Weather .current-icon {
   max-width: 90px;
+  padding-right: 10px;
 }
 
 .Weather .current-stats {
   margin: 40px auto 0px;
 }
 
-.Weather .current-stats .icon {
+.Weather .current-stats,
+.icon {
   padding: 0px;
 }
 
-.Weather .current-stats .location {
+.Weather .current-stats,
+.location {
   text-align: right;
 }
 
-.Weather .current-stats .current-weather {
+.Weather .current-stats,
+.current-weather {
   padding-left: 30px;
   text-align: left;
 }
@@ -27,16 +31,7 @@
   display: inline;
 }
 
-.Weather .current-weather-desc {
-  text-transform: capitalize;
-}
-
-.Weather .current-stats .current-weather .hum-wind {
-  font-weight: 300;
-  font-size: 14px;
-}
-
-.Weather .forecast-day .icon {
+.Weather .forecast-day {
   font-size: 32px;
   margin-top: 10px;
 }
@@ -74,14 +69,18 @@
   cursor: none;
 }
 
-.Weather .temperature-scales .celsius,
-.temperature-scales .fahrenheit {
+.Weather .temperature-scales,
+.celsius,
+.temperature-scales,
+.fahrenheit {
   display: inline;
   font-weight: 300;
 }
 
-.Weather .temperature-scales .celsius-link,
-.temperature-scales .fahrenheit-link {
+.Weather .temperature-scales,
+.celsius-link,
+.temperature-scales,
+.fahrenheit-link {
   color: rgb(58, 129, 184);
   text-decoration: none;
   cursor: pointer;
