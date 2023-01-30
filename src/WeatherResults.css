@@ -1,5 +1,24 @@
-.humidity,
-.wind {
-  font-weight: 300;
-  font-size: 14px;
+.current-icon {
+  max-width: 90px;
+  padding-right: 10px;
+}
+
+.current-stats,
+.current-weather {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.current-stats,
+.location {
+  text-align: right;
+}
+
+.current-stats {
+  margin: 40px auto 0px;
+}
+
+.current-stats,
+.icon {
+  padding: 0px;
 }

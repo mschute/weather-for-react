@@ -1,42 +1,13 @@
-.Weather li {
+li {
   list-style-type: none;
 }
 
-.Weather .current-icon {
-  max-width: 90px;
-  padding-right: 10px;
-}
-
-.Weather .current-stats {
-  margin: 40px auto 0px;
-}
-
-.Weather .current-stats,
-.icon {
-  padding: 0px;
-}
-
-.Weather .current-stats,
-.location {
-  text-align: right;
-}
-
-.Weather .current-stats,
-.current-weather {
-  padding-left: 30px;
-  text-align: left;
-}
-
-.Weather .current-temp {
-  display: inline;
-}
-
-.Weather .forecast-day {
+.forecast-day {
   font-size: 32px;
   margin-top: 10px;
 }
 
-.Weather .form-control {
+.form-control {
   display: inline;
   margin-top: 40px;
   border: 1px solid;
@@ -48,7 +19,7 @@
   margin-right: 10px;
 }
 
-.Weather .search-button {
+.search-button {
   background-color: rgb(58, 129, 184);
   border: 1px solid rgb(37, 88, 126);
   border-radius: 8px;
@@ -59,33 +30,12 @@
   transition: 150ms ease-in-out;
 }
 
-.Weather .search-button:hover {
+.search-button:hover {
   background-color: rgb(37, 88, 126);
   cursor: pointer;
 }
 
-.Weather .search-button:disabled {
+.search-button:disabled {
   background-color: rgb(91, 106, 117);
   cursor: none;
-}
-
-.Weather .temperature-scales,
-.celsius,
-.temperature-scales,
-.fahrenheit {
-  display: inline;
-  font-weight: 300;
-}
-
-.Weather .temperature-scales,
-.celsius-link,
-.temperature-scales,
-.fahrenheit-link {
-  color: rgb(58, 129, 184);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.Weather .active {
-  font-weight: 600;
 }
