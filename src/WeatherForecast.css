@@ -1,0 +1,11 @@
+.even {
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+.day-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.forecast-container {
+  margin: 10px auto 0px;
+}

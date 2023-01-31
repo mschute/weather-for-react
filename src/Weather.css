@@ -2,11 +2,6 @@ li {
   list-style-type: none;
 }
 
-.forecast-day {
-  font-size: 32px;
-  margin-top: 10px;
-}
-
 .form-control {
   display: inline;
   margin-top: 40px;

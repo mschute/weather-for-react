@@ -1,0 +1,25 @@
+.forecast-day {
+  font-size: 16px;
+  font-weight: 600px;
+  margin-top: 10px;
+}
+
+.forecast-icon {
+  font-size: 8px;
+}
+
+.forecast-temperatures {
+  margin: 10px 0px;
+}
+
+.forecast-high {
+  font-weight: 600;
+}
+
+.forecast-low {
+  font-weight: 500;
+}
+
+.forecast-icon {
+  width: 60px;
+}
