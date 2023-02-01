@@ -3,7 +3,7 @@ import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import WeatherResults from "./WeatherResults";
-import WeatherForecast from "./WeatherForecast";
+// import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -54,7 +54,7 @@ export default function Weather(props) {
           <input type="submit" value="Search" className="search-button" />
         </form>
         <WeatherResults data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        {/* <WeatherForecast coordinates={weatherData.coordinates} /> */}
       </div>
     );
   } else {

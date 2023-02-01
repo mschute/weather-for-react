@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./UnitConversion.css";
+import WeatherForecast from "./WeatherForecast";
 
 export default function UnitConversion(props) {
   const [unit, setUnit] = useState("celsius");
@@ -39,25 +40,33 @@ export default function UnitConversion(props) {
         </li>
         <li className="humidity">Humidity {props.humidity}%</li>
         <li className="wind">Wind {Math.round(props.kilometers)} kph</li>
+        <WeatherForecast coordinates={props.coordinates} unit={unit} />
       </div>
     );
   } else {
     return (
       <div>
-        <li className="current-temp">
-          {convertFahrenheit()}
-          <sup className="temperature-scales">
-            <div className="celsius">
-              <a href className="celsius-link active" onClick={showFahrenheit}>
-                {" "}
-                °C{" "}
-              </a>
-            </div>
-            |<div className="fahrenheit"> °F</div>
-          </sup>
-        </li>
-        <li className="humidity">Humidity {props.humidity}%</li>
-        <li className="wind">Wind {convertMiles()} mph</li>
+        <div>
+          <li className="current-temp">
+            {convertFahrenheit()}
+            <sup className="temperature-scales">
+              <div className="celsius">
+                <a
+                  href
+                  className="celsius-link active"
+                  onClick={showFahrenheit}
+                >
+                  {" "}
+                  °C{" "}
+                </a>
+              </div>
+              |<div className="fahrenheit"> °F</div>
+            </sup>
+          </li>
+          <li className="humidity">Humidity {props.humidity}%</li>
+          <li className="wind">Wind {convertMiles()} mph</li>
+        </div>
+        <WeatherForecast coordinates={props.coordinates} units={unit} />
       </div>
     );
   }
