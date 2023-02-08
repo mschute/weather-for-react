@@ -6,8 +6,13 @@ import WeatherResults from "./WeatherResults";
 import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [unit, setUnit] = useState("celsius");
   const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState({ ready: false });
+
+  function handleUnit(unit) {
+    setUnit(unit);
+  }
 
   function handleResponse(response) {
     setWeatherData({
@@ -53,8 +58,12 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" className="search-button" />
         </form>
-        <WeatherResults data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherResults
+          data={weatherData}
+          unit={unit}
+          unitCallback={handleUnit}
+        />
+        <WeatherForecast data={weatherData} unit={unit} />
       </div>
     );
   } else {

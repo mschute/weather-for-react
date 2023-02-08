@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import "./UnitConversion.css";
 
 export default function UnitConversion(props) {
-  const [unit, setUnit] = useState("celsius");
+  const [unit, setUnit] = useState(props.unit);
 
   function showCelsius(event) {
     event.preventDefault();
     setUnit("fahrenheit");
+    props.unitCallback("fahrenheit");
   }
 
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("celsius");
+    props.unitCallback("celsius");
   }
 
   function convertFahrenheit() {
