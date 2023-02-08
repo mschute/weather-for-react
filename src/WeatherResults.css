@@ -3,13 +3,11 @@
   padding-right: 10px;
 }
 
-.current-stats,
 .current-weather {
   padding-left: 30px;
   text-align: left;
 }
 
-.current-stats,
 .location {
   text-align: right;
 }

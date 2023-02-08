@@ -29,8 +29,3 @@ li {
   background-color: rgb(37, 88, 126);
   cursor: pointer;
 }
-
-.search-button:disabled {
-  background-color: rgb(91, 106, 117);
-  cursor: none;
-}

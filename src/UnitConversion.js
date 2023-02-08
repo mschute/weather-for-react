@@ -21,18 +21,22 @@ export default function UnitConversion(props) {
   }
 
   function convertMiles() {
-    return Math.round(props.kilometers / 1.609);
+    return Math.round(props.wind / 1.609);
   }
 
   if (unit === "celsius") {
     return (
       <div>
-        <li className="current-temp">
+        <li>
           {Math.round(props.celsius)}
           <sup className="temperature-scales">
-            <div className="celsius"> °C </div>|
-            <div className="fahrenheit">
-              <a href className="fahrenheit-link active" onClick={showCelsius}>
+            <div className="celsius-label"> °C </div>|
+            <div className="fahrenheit-label">
+              <a
+                href
+                className="fahrenheit-link inactive"
+                onClick={showCelsius}
+              >
                 {" "}
                 °F
               </a>
@@ -40,22 +44,26 @@ export default function UnitConversion(props) {
           </sup>
         </li>
         <li className="humidity">Humidity {props.humidity}%</li>
-        <li className="wind">Wind {Math.round(props.kilometers)} kph</li>
+        <li className="wind">Wind {Math.round(props.wind)} kph</li>
       </div>
     );
   } else {
     return (
       <div>
-        <li className="current-temp">
+        <li>
           {convertFahrenheit()}
           <sup className="temperature-scales">
-            <div className="celsius">
-              <a href className="celsius-link active" onClick={showFahrenheit}>
+            <div className="celsius-label">
+              <a
+                href
+                className="celsius-link inactive"
+                onClick={showFahrenheit}
+              >
                 {" "}
                 °C{" "}
               </a>
             </div>
-            |<div className="fahrenheit"> °F</div>
+            |<div className="fahrenheit-label"> °F</div>
           </sup>
         </li>
         <li className="humidity">Humidity {props.humidity}%</li>

@@ -8,7 +8,7 @@ export default function App() {
       <div class="container-sm text-center">
         <Weather defaultCity="London" />
       </div>
-      <div className="footer-link">
+      <div className="footer">
         <a href="https://github.com/mschute/weather-for-react">
           Open-source coded
         </a>{" "}

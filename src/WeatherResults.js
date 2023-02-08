@@ -17,7 +17,7 @@ export default function WeatherResults(props) {
         <ul className="col-6 current-weather">
           <UnitConversion
             celsius={props.data.temperature}
-            kilometers={props.data.wind}
+            wind={props.data.wind}
             humidity={props.data.humidity}
             unit={props.unit}
             unitCallback={props.unitCallback}
