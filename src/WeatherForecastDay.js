@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./WeatherForecastDay.css";
 
 export default function WeatherForecastDay(props) {
+  const [unit] = useState(props.unit);
+
   function day() {
     let date = new Date(props.data.time * 1000);
     let day = date.getDay();
@@ -9,6 +11,14 @@ export default function WeatherForecastDay(props) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     return days[day];
+  }
+
+  function getTemp(temp) {
+    if (unit === "fahrenheit") {
+      return Math.round((temp * 9) / 5 + 32);
+    }
+
+    return Math.round(temp);
   }
 
   return (
@@ -21,11 +31,11 @@ export default function WeatherForecastDay(props) {
       />
       <div className="forecast-temperatures">
         <span className="forecast-high">
-          {Math.round(props.data.temperature.maximum)}°
+          {getTemp(props.data.temperature.maximum)}°
         </span>{" "}
         /{" "}
         <span className="forecast-low">
-          {Math.round(props.data.temperature.minimum)}°
+          {getTemp(props.data.temperature.minimum)}°
         </span>
       </div>
     </div>

@@ -4,12 +4,13 @@ import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
+  let [unit] = useState(props.unit);
   let [ready, setReady] = useState(false);
   let [forecast, setForecast] = useState("");
 
   useEffect(() => {
     setReady(false);
-  }, [props.coordinates]);
+  }, [props.unit]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -24,7 +25,7 @@ export default function WeatherForecast(props) {
             if (index < 5) {
               return (
                 <div className="col day-container" key={index}>
-                  <WeatherForecastDay data={forecastDays} />
+                  <WeatherForecastDay data={forecastDays} unit={props.unit} />
                 </div>
               );
             } else {
@@ -37,8 +38,8 @@ export default function WeatherForecast(props) {
   } else {
     let apiKey = "f4ff5751e00t63c15a8eb8eo1612abfe";
     let units = "metric";
-    let lon = props.coordinates.longitude;
-    let lat = props.coordinates.latitude;
+    let lon = props.data.coordinates.longitude;
+    let lat = props.data.coordinates.latitude;
     let geoApiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
     axios.get(geoApiUrl).then(handleResponse);
   }
