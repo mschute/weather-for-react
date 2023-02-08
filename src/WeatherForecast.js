@@ -23,8 +23,12 @@ export default function WeatherForecast(props) {
         <div className="row">
           {forecast.map(function (forecastDays, index) {
             if (index < 5) {
+              let evenOddClass = index % 2 === 0 ? "even" : "odd";
               return (
-                <div className="col day-container" key={index}>
+                <div
+                  className={`col day-container ${evenOddClass}`}
+                  key={index}
+                >
                   <WeatherForecastDay data={forecastDays} unit={props.unit} />
                 </div>
               );
