@@ -19,6 +19,8 @@ export default function WeatherResults(props) {
             celsius={props.data.temperature}
             kilometers={props.data.wind}
             humidity={props.data.humidity}
+            unit={props.unit}
+            unitCallback={props.unitCallback}
           />
         </ul>
         <ul className="col-5 location">
