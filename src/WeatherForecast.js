@@ -4,7 +4,6 @@ import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
-  let [unit] = useState(props.unit);
   let [ready, setReady] = useState(false);
   let [forecast, setForecast] = useState("");
 
