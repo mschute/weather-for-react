@@ -9,11 +9,17 @@ export default function App() {
         <Weather defaultCity="London" />
       </div>
       <div className="footer">
-        <a href="https://github.com/mschute/weather-for-react">
+        <a
+          href="https://github.com/mschute/weather-for-react"
+          rel="noopener noreferrer"
+        >
           Open-source coded
         </a>{" "}
         by Marta Unterschute and{" "}
-        <a href="https://stunning-trifle-6a4b1e.netlify.app/">
+        <a
+          href="https://stunning-trifle-6a4b1e.netlify.app/"
+          rel="noopener noreferrer"
+        >
           hosted on Netlify
         </a>
       </div>
