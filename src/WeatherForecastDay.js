@@ -10,7 +10,7 @@ export default function WeatherForecastDay(props) {
 
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    return days[day];
+    return days[(day + 1) % 7];
   }
 
   function getTemp(temp) {
